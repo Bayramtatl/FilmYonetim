@@ -1,0 +1,31 @@
+﻿@model FilmYonetim.Domain.Entities.Salon
+
+@{
+    ViewData["Title"] = "Salon Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xxl-12">
+        <div class="card card-xxl-stretch mb-5 mb-xl-8">
+            <div class="card-header border-0 pt-5">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bolder fs-3 mb-1">Salon Ekle</span>
+                </h3>
+            </div>
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="card-body">
+                <form asp-action="Add" asp-antiforgery="true">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-5">
+                        <label asp-for="SalonAd" class="form-label"></label>
+                        <input asp-for="SalonAd" class="form-control" asp-placeholder-for="SalonAd" />
+                        <span asp-validation-for="SalonAd" class="text-danger"></span>
+                    </div>
+                    <a class="btn btn-secondary mr-2" asp-action="List"><i class="fa fa-arrow-left"></i>Listeye Dön</a>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check"></i>Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

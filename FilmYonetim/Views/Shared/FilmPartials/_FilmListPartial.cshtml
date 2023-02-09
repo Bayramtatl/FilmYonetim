@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FilmYonetim.Domain.Entities.Film>
+ 
+<table id="datatablesSimple">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmAd)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.FilmYapimYil)
+            </th>           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FilmAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FilmYapimYil)
+                </td>              
+            </tr>
+        }
+    </tbody>
+</table>

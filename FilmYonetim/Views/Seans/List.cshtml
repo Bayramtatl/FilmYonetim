@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FilmYonetim.Domain.Entities.Seans>
+@{
+    ViewData["Title"] = "Seans Listesi";
+    Layout = "_Layout";
+}
+
+<div class="m-5">
+
+    <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeansNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GosterimYili)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Film)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salon)
+                </th>
+                <th>
+                    <a asp-action="Add" class="btn btn-success text-light">
+                        <i class="fa fa-plus"></i>Seans Ekle
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeansNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GosterimYili)
+                    </td>
+                    <td>
+                        @if (item.Film != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.Film.FilmAd)
+                        }
+                    </td>
+                    <td>
+                        @if (item.Salon != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.Salon.SalonAd)
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger ">
+                            Sil
+                        </a>
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-secondary">
+                            Güncelle
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FilmYonetim.Domain.Entities.Film>
+@{
+    ViewData["Title"] = "Film Listesi";
+    Layout = "_Layout";
+}
+
+<div class="m-5">
+
+
+    <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilmAd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FilmYapimYil)
+                </th>
+                <th>
+                    <a asp-action="Add" class="btn btn-success text-light">
+                        <i class="fa fa-plus"></i>Film Ekle
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FilmAd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FilmYapimYil)
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger ">
+                            Sil
+                        </a>
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-secondary">
+                            Güncelle
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

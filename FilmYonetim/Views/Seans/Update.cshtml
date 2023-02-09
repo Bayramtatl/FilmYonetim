@@ -1,0 +1,47 @@
+﻿@model FilmYonetim.Domain.Entities.Seans
+@{
+    ViewData["Title"] = "Seans Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xxl-12">
+        <div class="card card-xxl-stretch mb-5 mb-xl-8">
+            <div class="card-header border-0 pt-5">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bolder fs-3 mb-1">Seans Güncelle</span>
+                </h3>
+            </div>
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="card-body">
+                <form asp-action="Update" asp-antiforgery="true">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" value="@Model.Id" />
+                    <div class="mb-5">
+                        <label asp-for="SeansNo" class="form-label"></label>
+                        <input asp-for="SeansNo" class="form-control" asp-placeholder-for="SeansNo" />
+                        <span asp-validation-for="SeansNo" class="text-danger"></span>
+                    </div>
+                    <div class="mb-5">
+                        <label>Film Seçiniz</label>
+                        <select asp-items="ViewBag.Filmler" class="form-control" asp-for="FilmId">
+                            <option value="0">Seçiniz</option>
+                        </select>
+                    </div>
+                    <div class="mb-5">
+                        <label>Salon Seçiniz</label>
+                        <select asp-items="ViewBag.Salonlar" class="form-control" asp-for="SalonId">
+                            <option value="0">Seçiniz</option>
+                        </select>
+                    </div>
+                    <div class="mb-5">
+                        <label asp-for="GosterimYili" class="form-label"></label>
+                        <input asp-for="GosterimYili" class="form-control" asp-placeholder-for="GosterimYili" />
+                        <span asp-validation-for="GosterimYili" class="text-danger"></span>
+                    </div>
+                    <a class="btn btn-secondary mr-2" asp-action="List"><i class="fa fa-arrow-left"></i>Listeye Dön</a>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check"></i>Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

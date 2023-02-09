@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmYonetim.Presentation", "FilmYonetim\FilmYonetim.Presentation.csproj", "{C64328D6-3903-46F2-95EA-C2E7B9EA1ED6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmYonetim.Domain", "ENTITY\FilmYonetim.Domain.csproj", "{EE4A4D84-A785-43AD-9767-CB78669549EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmYonetim.Business", "FilmYonetim.Business\FilmYonetim.Business.csproj", "{8225F0B7-45A0-44B4-839F-8F01EA2041EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmYonetim.Dal", "FilmYonetim.Dal\FilmYonetim.Dal.csproj", "{CA992849-9D62-4FBA-AB24-373829906851}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C64328D6-3903-46F2-95EA-C2E7B9EA1ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64328D6-3903-46F2-95EA-C2E7B9EA1ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64328D6-3903-46F2-95EA-C2E7B9EA1ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64328D6-3903-46F2-95EA-C2E7B9EA1ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4A4D84-A785-43AD-9767-CB78669549EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4A4D84-A785-43AD-9767-CB78669549EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4A4D84-A785-43AD-9767-CB78669549EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4A4D84-A785-43AD-9767-CB78669549EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8225F0B7-45A0-44B4-839F-8F01EA2041EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8225F0B7-45A0-44B4-839F-8F01EA2041EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8225F0B7-45A0-44B4-839F-8F01EA2041EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8225F0B7-45A0-44B4-839F-8F01EA2041EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA992849-9D62-4FBA-AB24-373829906851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA992849-9D62-4FBA-AB24-373829906851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA992849-9D62-4FBA-AB24-373829906851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA992849-9D62-4FBA-AB24-373829906851}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {906B7203-DA88-4558-B58F-C08D745EDFA2}
+	EndGlobalSection
+EndGlobal

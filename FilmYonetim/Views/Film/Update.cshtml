@@ -1,0 +1,35 @@
+﻿@model FilmYonetim.Domain.Entities.Film
+@{
+    ViewData["Title"] = "Film Güncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xxl-12">
+        <div class="card card-xxl-stretch mb-5 mb-xl-8">
+            <div class="card-header border-0 pt-5">
+                <h3 class="card-title align-items-start flex-column">
+                    <span class="card-label fw-bolder fs-3 mb-1">Film Güncelle</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Update" asp-antiforgery="true">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" value="@Model.Id" />
+                    <div class="mb-5">
+                        <label asp-for="FilmAd" class="form-label"></label>
+                        <input asp-for="FilmAd" class="form-control" asp-placeholder-for="FilmAd" />
+                        <span asp-validation-for="FilmAd" class="text-danger"></span>
+                    </div>
+                    <div class="mb-5">
+                        <label asp-for="FilmYapimYil" class="form-label"></label>
+                        <input asp-for="FilmYapimYil" class="form-control" asp-placeholder-for="FilmYapimYil" />
+                        <span asp-validation-for="FilmYapimYil" class="text-danger"></span>
+                    </div>
+
+                    <a class="btn btn-secondary mr-2" asp-action="List"><i class="fa fa-arrow-left"></i>Listeye Dön</a>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check"></i>Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

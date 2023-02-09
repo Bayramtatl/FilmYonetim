@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FilmYonetim.Domain.Entities.Film>
+@{
+    ViewData["Title"] = "Filme Göre Filtreleme";
+    Layout = "_Layout";
+}
+<div class="m-5">
+    <blockquote class="blockquote">
+        <p class="mb-3">Filme Göre Filtreleme</p>
+        <footer class="blockquote-footer"><cite title="Source Title">Seçilen Filmin hangi salonda gösterime girdiğini listeler</cite></footer>
+    </blockquote>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a class="btn btn-outline-secondary mb-2 text-dark list-unstyled" asp-controller="Seans" asp-action="GetByFilm" asp-route-id="@item.Id" type="submit">@item.FilmAd</a>
+            </li>
+        }
+    </ul>
+
+    <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>
+                    Salon Adi
+                </th>
+                <th>
+                    Gösterim Yılı
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.Seanslar != null)
+            {
+                @foreach (var seans in ViewBag.Seanslar)
+                {
+                    <tr>
+                        <td>
+                            @seans.Salon.SalonAd
+                        </td>
+                        <td>
+                            @seans.Film.FilmYapimYil
+                        </td>
+                    </tr>
+                       }
+            }
+                </tbody>
+            </table>
+             
+</div>

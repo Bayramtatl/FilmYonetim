@@ -1,0 +1,53 @@
+﻿@model FilmYonetim.Domain.Entities.Seans
+@{
+    ViewData["Title"] = "Yıllara Göre Filtreleme";
+    Layout = "_Layout";
+}
+<div class="m-5">
+<blockquote class="blockquote">
+  <p class="mb-3">Yıllara Göre Filtreleme</p>
+  <footer class="blockquote-footer"><cite title="Source Title">Seçilen iki yıl arasında yapılmış filmleri listeler</cite></footer>
+</blockquote>
+    <div class="login-form col-10">
+        <form asp-action="GetByYears" asp-controller="Seans" method="post">
+            <div class="form-group">
+                <label for="kullaniciAdi">Başlangıç Tarihi</label>
+                <input class="form-control" asp-for="BaslangicTarih">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Bitiş Tarihi</label>
+                <input class="form-control" asp-for="BitisTarih">
+            </div>
+            <button class="btn btn-success my-2" asp-controller="Seans" asp-action="GetByYears" type="submit"> Filtrele </button>
+        </form>
+    </div>
+    <table id="datatablesSimple">
+        <thead>
+            <tr>
+                <th>
+                    Salon Adi
+                </th>
+                <th>
+                    Gösterim Yılı
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.Filmler != null)
+            {
+                @foreach (var film in ViewBag.Filmler)
+                {
+                    <tr>
+                        <td>
+                            @film.FilmAd
+                        </td>
+                        <td>
+                            @film.FilmYapimYil
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
