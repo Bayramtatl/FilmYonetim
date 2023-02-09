@@ -18,3 +18,20 @@ desteklemektedir.
 ## Seans Liste Sayfası
 ![image](https://user-images.githubusercontent.com/92461836/217816465-0a60337d-98d6-465d-ac5f-883ca7bb0163.png)
 
+# Filme Göre Filtreleme Sayfası
+
+X filminin hangi salonlarda hangi yıllarda gösterime girdiğini listeleme işlemini yapar.
+
+![image](https://user-images.githubusercontent.com/92461836/217817095-a1af0d8d-013e-4f70-afbb-ede48e92c343.png)
+
+# Yapım Yılına Göre Filtreleme Sayfası
+
+X yapım yılı ile Y yapım yılı arasındaki filmleri listelemeyi sağlar.
+
+![image](https://user-images.githubusercontent.com/92461836/217817594-cf97d6d9-1f1e-4dc1-8b3e-c9c8d4c7a669.png)
+
+# Salona Göre Filtreleme Sayfası
+
+X salonunda gösterime giren tüm filmleri listeleme
+
+![image](https://user-images.githubusercontent.com/92461836/217817744-43850533-80ad-4b44-b85b-8954621e7242.png)
